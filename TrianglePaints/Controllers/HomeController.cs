@@ -5,14 +5,12 @@ using System.Web;
 using System.Web.Mvc;
 using System.Configuration;
 using System.Data;
-using MySql.Data.MySqlClient;
 using Dapper;
 
 namespace TrianglePaints.Controllers
 {
     public class HomeController : Controller
     {
-        private IDbConnection _db = new MySqlConnection(ConfigurationManager.ConnectionStrings["DbConnection"].ConnectionString);
         public ActionResult Index()
         {
             return View();
